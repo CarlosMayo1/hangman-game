@@ -1,0 +1,221 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  list-style: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  background: var(--background-color);
+}
+
+:root {
+  --background-color: #e5e5e5;
+  --primary-color: #0a3871;
+  --label-color: #495057;
+  --error-color: #ed4337;
+  --succes-color: #28a745;
+}
+
+/*  ===================== */
+/* HEADER  */
+/*  ===================== */
+header {
+  position: fixed;
+  background: var(--background-color);
+  padding-left: 3rem;
+  padding-top: 3rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+#alura-logo {
+  width: 31px;
+  height: 48px;
+}
+
+/*  ===================== */
+/* MAIN SECTION  */
+/*  ===================== */
+#title {
+  color: var(--primary-color);
+  font-size: 30px;
+}
+
+#main-section {
+  padding-top: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#main-actions {
+  margin-top: 10em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  cursor: pointer;
+  border: 1px solid transparent;
+  outline: none;
+  border-radius: 10px;
+  padding: 24px;
+  width: 280px;
+  height: 67px;
+}
+
+.start {
+  background: var(--primary-color);
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.add {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 25px !important;
+}
+
+/*  ===================== */
+/* ADD WORD SECTION  */
+/*  ===================== */
+#add-word-section {
+  position: relative;
+  top: 256px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5em;
+  margin-bottom: 10em;
+}
+
+.error {
+  color: var(--error-color);
+}
+
+.success {
+  color: var(--succes-color);
+}
+
+#input-error {
+  margin-top: 1rem;
+  font-size: 16px;
+}
+
+#input {
+  text-transform: uppercase;
+  color: var(--primary-color);
+  width: 299px;
+  height: 48px;
+  border: 1px solid transparent;
+  padding: 0.5rem;
+  background: var(--background-color);
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#input::placeholder {
+  color: var(--primary-color);
+  font-size: 20px;
+}
+
+#label {
+  color: var(--label-color);
+  margin-bottom: 0.5rem;
+}
+
+#icon {
+  margin-right: 5px;
+}
+
+/*  ===================== */
+/* GAME SECTION  */
+/*  ===================== */
+#game-section {
+  position: relative;
+  top: 620px;
+}
+
+.draw-container {
+  margin-top: 20px;
+  display: flex;
+  /* align-items: center; */
+}
+
+.figure-container {
+  fill: transparent;
+  stroke: #222;
+  stroke-width: 4px;
+}
+
+.figure-part {
+  display: none;
+}
+
+#letters-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+}
+
+.line {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+  text-align: center;
+  border-bottom: 3px solid #000;
+}
+
+#wrong-letters-container {
+  margin-top: 20px;
+}
+
+#wrong-letters {
+  text-align: center;
+}
+
+#wrong-letters span {
+  text-transform: uppercase;
+}
+
+#wrong-letters span {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/*  ===================== */
+/* NOTIFICATION  */
+/*  ===================== */
+
+.notification-container {
+  color: var(--primary-color);
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px 10px 0 0;
+  padding: 15px 20px;
+  position: absolute;
+  bottom: -1450px;
+  transition: transform 0.3s ease-in-out;
+  display: none;
+}
+.notification-container p {
+  margin: 0;
+}
+.notification-container.show {
+  transform: translateY(-50px);
+}

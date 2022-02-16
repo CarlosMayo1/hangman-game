@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <!-- Font Awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <title>Juego del ahorcado - Alura Challenge 02</title>
+  </head>
+  <body>
+    <header>
+      <img id="alura-logo" src="img/alura-logo.png" />
+    </header>
+    <section id="main-section">
+      <div class="container">
+        <h1 id="title">Juego del ahorcado</h1>
+        <h3>Segundo desafio de Alura</h3>
+        <div id="main-actions">
+          <a href="#game-section">
+            <button class="button start">Empezar el juego</button>
+          </a>
+          <a href="#add-word-section">
+            <button class="button add">Agregar nueva palabra</button>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="add-word-section">
+      <div class="container">
+        <h1 id="title">Agrega una nueva palabra</h1>
+        <div class="input-container">
+          <input id="input" type="text" placeholder="Nueva palabra" />
+          <span id="input-error" class="error"></span>
+        </div>
+        <div id="add-word-actions">
+          <p id="label">
+            <span id="icon"><i class="fas fa-exclamation-circle"></i></span
+            >Máximo de 8 caracteres
+          </p>
+          <button id="add-word" class="button start">Guardar y empezar</button>
+          <button id="cancel" class="button add">Cancelar</button>
+        </div>
+      </div>
+    </section>
+    <section id="game-section">
+      <div class="container">
+        <h1 id="title">Juego del ahorcado</h1>
+        <div class="draw-container">
+          <svg class="figure-container" height="250" width="200">
+            <!--  Base -->
+            <line x1="20" y1="230" x2="100" y2="230" />
+            <line x1="60" y1="180" x2="20" y2="230" />
+            <line x1="60" y1="180" x2="100" y2="230" />
+
+            <!--  first draw -->
+            <line x1="60" y1="20" x2="60" y2="180" class="figure-part" />
+            <!--  second draw -->
+            <line x1="60" y1="20" x2="140" y2="20" class="figure-part" />
+            <!--  third draw -->
+            <line x1="140" y1="20" x2="140" y2="50" class="figure-part" />
+
+            <!-- Head-->
+            <circle cx="140" cy="70" r="20" class="figure-part" />
+            <!--Body-->
+            <line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
+            <!--Arms-->
+            <line x1="140" y1="120" x2="120" y2="100" class="figure-part" />
+            <line x1="140" y1="120" x2="160" y2="100" class="figure-part" />
+            <!--Legs-->
+            <line x1="140" y1="150" x2="120" y2="180" class="figure-part" />
+            <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
+          </svg>
+
+          <div id="wrong-letters-container">
+            <h2 class="error" id="end-game"></h2>
+            <div id="wrong-letters"></div>
+          </div>
+        </div>
+        <div id="letters-container"></div>
+        <div id="game-actions">
+          <button id="new-game" class="button start">Nuevo Juego</button>
+          <button id="desist-game" class="button add">Disistir</button>
+        </div>
+      </div>
+    </section>
+
+    <!--Notification -->
+    <div class="notification-container" id="notification-container">
+      <p>You have already entered this letter</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
